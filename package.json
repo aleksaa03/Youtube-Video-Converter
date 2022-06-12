@@ -1,0 +1,24 @@
+{
+  "name": "node-youtube-video-downloader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "dev": "npx tailwindcss -i ./views/styles/style.css -o ./views/styles/output.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16",
+    "ytdl-core": "^4.11.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.2"
+  }
+}

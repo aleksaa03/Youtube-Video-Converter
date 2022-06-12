@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="styles/output.css" />
+    <title>Youtube Video Converter</title>
+  </head>
+  <body>
+    <div class="main flex justify-center items-center flex-col mt-20">
+      <div class="header">
+        <h1 class="font-bold text-3xl">Youtube Video Converter</h1>
+      </div>
+      <div class="get-video-container mt-10">
+        <input
+          type="text"
+          class="h-10 w-96 border-2 mr-1 p-2 focus:border-blue-500 focus:shadow-lg transition-all delay-2 outline-none"
+          name=""
+          autocomplete="off"
+          id="url"
+          placeholder="URL"
+        />
+        <button
+          class="h-10 w-24 ml-1 border-2 border-blue-500 text-black hover:bg-blue-500 hover:text-white hover:border-2 hover:shadow-lg transition-all delay-2"
+          onclick="GetVideo()"
+        >
+          Convert
+        </button>
+      </div>
+      <div
+        class="output-container flex justify-center items-center flex-col mt-5"
+        id="output-container"
+      ></div>
+      <h1 class="text-center text-red-500 text-lg mt-5" id="error"></h1>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
