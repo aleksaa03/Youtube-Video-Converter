@@ -7,7 +7,10 @@ function GetVideo() {
     return;
   }
 
-  fetch(`http://localhost:5000/getVideo?URL=${url.value}`, { method: "GET" })
+  fetch(
+    `https://youtube-video-converter.herokuapp.com/getVideo?URL=${url.value}`,
+    { method: "GET" }
+  )
     .then((req) => req.json())
     .then((res) => {
       if (res.errorMessage) {
@@ -32,7 +35,7 @@ function GetVideo() {
 }
 
 function DownloadVideoOrAudio(URL, title, type) {
-  window.location.href = `http://localhost:5000/download?URL=${URL}&title=${title}&type=${type}`;
+  window.location.href = `https://youtube-video-converter.herokuapp.com/download?URL=${URL}&title=${title}&type=${type}`;
 }
 
 function ErrorMessage(message) {
