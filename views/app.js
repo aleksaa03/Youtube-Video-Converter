@@ -75,13 +75,13 @@ function FormatPublishDate(publishDate) {
 }
 
 function OutputContainer(title, thumbnailURL, likes, viewCount, publishDate) {
-  output.innerHTML = `<p class="font-semibold text-xl w-[500px] text-center truncate"><abbr class="no-underline" title="${title}">${title}</abbr></p>
+  output.innerHTML = `<p class="font-semibold text-xl w-[500px] text-center truncate" id="title"><abbr class="no-underline" title="${title}">${title}</abbr></p>
   <img
     src=${thumbnailURL}
     class="w-[500px] mt-2 border-2 border-blue-500"
   />
   <div
-    class="relative px-2 flex justify-between items-center w-[100%] mt-2"
+    class="details relative px-2 flex justify-between items-center w-[100%] mt-2"
   >
     <p class="text-lg">
       <i class="bi bi-hand-thumbs-up-fill text-blue-500"></i> ${likes.toLocaleString()}
@@ -111,6 +111,5 @@ function OutputContainer(title, thumbnailURL, likes, viewCount, publishDate) {
       Download MP3
     </button>
   </div>
-  
   `;
 }
